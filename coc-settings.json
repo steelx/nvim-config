@@ -1,0 +1,38 @@
+{
+  "coc.preferences.diagnostic.virtualText": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "javascriptreact",
+    "typescript.tsx"
+  ],
+  "npm.binPath": "/home/linuxbrew/.linuxbrew/opt/node@12/bin/npm",
+  "eslint.filetypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "javascriptreact",
+    "typescript.tsx"
+  ],
+  "diagnostic.errorSign": "•",
+  "diagnostic.warningSign": "!",
+  "diagnostic.infoSign": "•",
+  "diagnostic.enable": true,
+  "diagnostic.virtualText": false,
+  "diagnostic.joinMessageLines": true,
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.messageTarget": "float",
+  "diagnostic.level": "information",
+  "suggest.autoTrigger": "none",
+  "suggest.echodocSupport": true,
+  "suggest.maxCompleteItemCount": 20,
+  "signature.enable": false,
+  "signature.target": "echo",
+  "coc.preferences.snippets.enable": false,
+  "coc.preferences.hoverTarget": "echo",
+  "rust-analyzer.inlayHints.chainingHints": false
+  //"rust-analyzer.serverPath": "/home/ajinkya/.cargo/bin/rust-analyzer",
+  //"rust-analyzer.cargo-watch.enable": false
+}
