@@ -17,14 +17,11 @@ Plug 'autozimu/LanguageClient-neovim', {
 
 "" File Searching
 " Fuzzy finder
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-rooter'
 
-if isdirectory('/usr/local/opt/fzf')
-  Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
-else
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-  Plug 'junegunn/fzf.vim'
-endif
+
 let g:make = 'gmake'
 if exists('make')
   let g:make = 'make'
@@ -118,18 +115,7 @@ nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
 "File Search
-"" CTRL+T to open it in a new tab.
-"" CTRL+S to open below (split view).
-"" CTRL+T to open to the side (vertical split).
-"" Enter to open it in the currently selected panel.
-nnoremap <C-p> :FZF<CR>
-let g:fzf_action = {
-      \ 'ctrl-t': 'tab split',
-      \ 'ctrl-s': 'split',
-      \ 'ctrl-v': 'vsplit'
-      \}
-
-
+source $HOME/.config/nvim/plugin-config/fzf.vim
 
 "File explorer
 
@@ -169,10 +155,7 @@ function! OpenTerminal()
 endfunction
 
 nnoremap <c-n> :call OpenTerminal()<CR>
-nmap <F5> <Plug>(lcn-menu)
-nmap <C-S-h> :LspHover<CR>
-nmap <C-S-g> :LspDefinition<CR>
-nnoremap <silent> <leader>b :Buffers<CR>
+
 
 " Rust
 let g:LanguageClient_serverCommands = {
@@ -184,9 +167,13 @@ let g:LanguageClient_serverCommands = {
     \ }
 
 " note that if you are using Plug mapping you should not use `noremap` mappings.
-nmap <F5> <Plug>(lcn-menu)
 " Or map each action separately
 nmap <silent>K <Plug>(lcn-hover)
 nmap <silent> gd <Plug>(lcn-definition)
 nmap <silent> <F2> <Plug>(lcn-rename)
+nmap <F5> <Plug>(lcn-menu)
+nmap <C-S-h> :LspHover<CR>
+nmap <C-S-g> :LspDefinition<CR>
+nnoremap <silent> <leader>b :Buffers<CR>
+
 
