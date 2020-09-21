@@ -156,19 +156,19 @@ nnoremap <c-n> :call OpenTerminal()<CR>
 
 
 " Rust
+" F5 lcn menu
 let g:LanguageClient_serverCommands = {
+    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
     \ 'javascript': ['javascript-typescript-stdio'],
     \ 'typescript': ['javascript-typescript-stdio'],
     \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
     \ 'python': ['/usr/local/bin/pyls'],
     \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
     \ }
-""  \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
 
 
 " note that if you are using Plug mapping you should not use `noremap` mappings.
 " Or map each action separately
-nmap <silent>K <Plug>(lcn-hover)
 nmap <silent> gd <Plug>(lcn-definition)
 nmap <silent> <F2> <Plug>(lcn-rename)
 nmap <F5> <Plug>(lcn-menu)
