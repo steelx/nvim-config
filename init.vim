@@ -68,6 +68,7 @@ endif
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 
+
 call plug#end()
 
 " Lightline
@@ -96,12 +97,9 @@ if (has("termguicolors"))
 endif
 
 filetype plugin indent on
-"syntax on
-syntax enable
 colorscheme dracula
 
-" Ignore node_modules
-"let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+
 
 "" Alt+H, Alt+J, Alt+K, and Alt+L
 " use alt+hjkl to move between split/vsplit panels
@@ -115,9 +113,9 @@ nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
 "File Search
+"File explorer
 source $HOME/.config/nvim/plugin-config/fzf.vim
 
-"File explorer
 
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
@@ -159,12 +157,14 @@ nnoremap <c-n> :call OpenTerminal()<CR>
 
 " Rust
 let g:LanguageClient_serverCommands = {
-    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
+    \ 'javascript': ['javascript-typescript-stdio'],
+    \ 'typescript': ['javascript-typescript-stdio'],
     \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
     \ 'python': ['/usr/local/bin/pyls'],
     \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
     \ }
+""  \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+
 
 " note that if you are using Plug mapping you should not use `noremap` mappings.
 " Or map each action separately

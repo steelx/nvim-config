@@ -36,6 +36,7 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 " # Editor settings
 " =============================================================================
 filetype plugin indent on
+set hidden
 set autoindent
 set timeoutlen=300 " http://stackoverflow.com/questions/2158516/delay-before-o-opens-a-new-line
 set encoding=utf-8
@@ -54,6 +55,8 @@ set nocompatible
 let g:python3_host_prog = '/usr/bin/python3'
 set number relativenumber
 set nu rnu
+
+
 
 " =============================================================================
 " # GUI settings
