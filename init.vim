@@ -251,5 +251,5 @@ nmap <C-S-h> :ALEHover<CR>
 nmap <C-S-g> :ALEGoToDefinition<CR>
 
 nnoremap <silent> <leader>b :Buffers<CR>
-nnoremap <silent> <c-w> :bd<CR>
+nnoremap <silent> <leader>x :bd<CR>
 
