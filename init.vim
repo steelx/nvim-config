@@ -33,6 +33,9 @@ Plug 'itchyny/lightline.vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'andymass/vim-matchup'
 
+" Tabs
+Plug 'ap/vim-buftabline'
+
 "" Syntax
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -115,7 +118,7 @@ nnoremap <A-l> <C-w>l
 "File Search
 "File explorer
 source $HOME/.config/nvim/plugin-config/fzf.vim
-
+source $HOME/.config/nvim/plugin-config/tabline.vim
 
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
