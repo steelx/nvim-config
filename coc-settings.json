@@ -32,7 +32,9 @@
   "signature.target": "echo",
   "coc.preferences.snippets.enable": false,
   "coc.preferences.hoverTarget": "echo",
-  "rust-analyzer.inlayHints.chainingHints": false
+  //"rust-analyzer.diagnostics.enable": false,
+  //"rust-analyzer.inlayHints.refreshOnInsertMode": false,
+  //"rust-analyzer.inlayHints.chainingHints": true,
   //"rust-analyzer.serverPath": "/home/ajinkya/.cargo/bin/rust-analyzer",
   //"rust-analyzer.cargo-watch.enable": false
 }
